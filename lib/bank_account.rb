@@ -13,6 +13,7 @@ class BankAccount
   end
 
   def withdraw(amount, date = date_today)
+    raise 'Please provide a positive amount' if amount < 0
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
   end

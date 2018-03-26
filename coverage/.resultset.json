@@ -2,9 +2,26 @@
   "RSpec": {
     "coverage": {
       "/Users/marcusgardiner/Desktop/Projects/tech_test_week/bank_tech_test/spec/bank_account_spec.rb": [
-
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marcusgardiner/Desktop/Projects/tech_test_week/bank_tech_test/lib/bank_account.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1522059708
+    "timestamp": 1522060367
   }
 }

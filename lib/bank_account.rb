@@ -13,7 +13,7 @@ class BankAccount
 
   def withdraw(amount, date)
     update_balance(-amount)
-    add_transaction(amount, date)
+    add_transaction(amount, date, 'debit')
   end
 
   private

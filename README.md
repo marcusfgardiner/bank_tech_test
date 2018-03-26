@@ -20,17 +20,25 @@ I want to be able to create a bank account with a default balance of 0
 So that I can increase the balance of my bank account -
 I want to be able to deposit money into my bank account
 
-As a User -
-So that I can see when I deposited money into my bank account -
-I want to be able to provide a date that I deposited money
-
-As a User -
+[G] As a User -
 So that I can decrease the balance of my bank account -
 I want to be able to withdraw money from my bank account
 
 As a User -
+So that I can see when I debited money from my bank account -
+I want the bank account to record the dates and amounts of debit transactions to my bank account
+
+As a User -
+So that I can see when I credited money to my bank account -
+II want the bank account to record the dates and amounts of credit transactions to my bank account
+
+As a User -
 So that I can see when I withdrew money into my bank account -
-I want to be able to provide a date that I withdrew money
+If I don't provide a date, I want the default date for when I withdrew money to be today
+
+As a User -
+So that I can see when I deposited money into my bank account -
+If I don't provide a date, I want the default date for when I deposit money to be today
 
 # PRINTING
 

@@ -14,7 +14,7 @@ describe BankAccount do
     end
     it 'records debit transactions including date and amount' do
       subject.deposit(20, '15/03/2018')
-      expect(subject.transactions).to eq([20, '15/03/2018'])
+      expect(subject.transactions.last).to eq([20, '15/03/2018'])
     end
   end
 

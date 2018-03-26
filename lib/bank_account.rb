@@ -1,12 +1,14 @@
 class BankAccount
-  attr_reader :balance
+  attr_reader :balance, :transactions
 
   def initialize
     @balance = 0
+    @transactions = []
   end
 
-  def deposit(amount)
+  def deposit(amount, date)
     @balance += amount
+    @transactions << [amount, date]
   end
 
   def withdraw(amount)

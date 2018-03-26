@@ -52,11 +52,11 @@ I want to be able to view a printed history of the use of my bank account
 
 # VALIDATIONS
 
-As a User -
+[R] As a User -
 So that I cannot deposit a negative amount -
 I want an error to be raised if I try to deposit a negative amount
 
-As a User -
+[R] As a User -
 So that I cannot withdraw a negative amount -
 I want an error to be raised if I try to withdraw a negative amount
 

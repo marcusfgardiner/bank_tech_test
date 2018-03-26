@@ -41,6 +41,10 @@ describe BankAccount do
       bank_deposit_50.withdraw(30)
       expect(bank_deposit_50.transactions.last[1]).to eq(date_today)
     end
+
+    it 'raises an error if balance would go below 0 from withdrawal' do
+      expect { subject.withdraw(20) }.to raise_error('Withdrawal denied, balance would go below 0!')
+    end
   end
 
   describe '#validations' do

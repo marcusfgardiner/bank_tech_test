@@ -6,7 +6,7 @@ class BankAccount
     @transactions = []
   end
 
-  def deposit(amount, date)
+  def deposit(amount, date = date_today)
     update_balance(amount)
     add_transaction(amount, date, 'credit')
   end
@@ -24,5 +24,9 @@ class BankAccount
 
   def add_transaction(amount, date, type)
     @transactions << [amount, date, type]
+  end
+
+  def date_today
+    Time.now.strftime("%d/%m/%Y")
   end
 end

@@ -21,17 +21,17 @@ describe BankAccount do
     it 'adds 50 to the balance of the bank account' do
       expect(bank_deposit_50.balance).to eq(50)
     end
+
+    it 'record todays date if no date is provided for a debit transaction' do
+      subject.deposit(50)
+      date_today = Time.now.strftime("%d/%m/%Y")
+      expect(subject.transactions.last[1]).to eq(date_today)
+    end
   end
 
   describe '#withdraw(amount, date)' do
     it 'takes away 20 from the balance of the bank account' do
       expect(bank_deposit_50_withdraw_20.balance).to eq(30)
-    end
-
-    it 'record todays date if no date is provided for a debit transaction' do
-      subject.deposit(50)
-      allow(Time).to receive(:now).and_return('12/12/2012')
-      expect(subject.transactions.last[1]).to eq('12/12/2012')
     end
   end
 

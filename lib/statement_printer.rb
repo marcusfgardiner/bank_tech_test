@@ -1,4 +1,5 @@
 class StatementPrinter
+
   def print_transaction(transaction)
     if transaction_type(transaction) == 'credit'
       print transaction[1] + ' || ' + two_decimals(transaction[0])  + ' ||  || ' +  two_decimals(transaction[3])

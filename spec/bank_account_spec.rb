@@ -65,7 +65,15 @@ describe BankAccount do
     end
 
     it 'raises an error if date provided is not of correct format' do
-      expect { subject.deposit(50,'hello') }.to raise_error("Not a correct date. Please provide date in format 'dd/mm/yy'")
+      expect { subject.deposit(50, 'hello') }.to raise_error("Not a correct date. Please provide date in format 'dd/mm/yy'")
+    end
+
+    it 'raises an error if date provided is not a valid UK date' do
+      expect { subject.deposit(50, '5/25/2012') }.to raise_error("Not a correct date. Please provide date in format 'dd/mm/yy'")
+    end
+
+    it 'does not raise an error if date provided is a valid UK date' do
+      expect { subject.deposit(50, '25/05/2012') }.not_to raise_error
     end
   end
 

@@ -1,3 +1,5 @@
+require 'date'
+
 class BankAccount
   attr_reader :balance, :transactions
 
@@ -7,13 +9,13 @@ class BankAccount
   end
 
   def deposit(amount, date = date_today)
-    validations(amount)
+    validations(amount, date)
     update_balance(amount)
     add_transaction(amount, date, 'credit')
   end
 
   def withdraw(amount, date = date_today)
-    validations(amount)
+    validations(amount, date)
     min_balance(amount)
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
@@ -33,11 +35,17 @@ class BankAccount
     Time.now.strftime('%d/%m/%Y')
   end
 
-  def validations(amount)
+  def validations(amount, date)
     unless (amount.is_a? Integer) || (amount.is_a? Float)
       raise 'Please provide an integer or number to 2 decimal places'
     end
     raise 'Please provide a positive amount' if amount < 0
+    begin
+      date = Date.strptime(date, '%d/%m/%Y').to_s
+      Date.parse(date)
+    rescue ArgumentError
+      raise "Not a correct date. Please provide date in format 'dd/mm/yy'"
+    end
   end
 
   def min_balance(amount)

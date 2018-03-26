@@ -7,13 +7,13 @@ class BankAccount
   end
 
   def deposit(amount, date = date_today)
-    raise 'Please provide a positive amount' if amount < 0
+    validations(amount)
     update_balance(amount)
     add_transaction(amount, date, 'credit')
   end
 
   def withdraw(amount, date = date_today)
-    raise 'Please provide a positive amount' if amount < 0
+    validations(amount)
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
   end
@@ -30,5 +30,9 @@ class BankAccount
 
   def date_today
     Time.now.strftime('%d/%m/%Y')
+  end
+
+  def validations(amount)
+    raise 'Please provide a positive amount' if amount < 0
   end
 end

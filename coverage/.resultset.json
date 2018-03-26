@@ -10,6 +10,13 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/marcusgardiner/Desktop/Projects/tech_test_week/bank_tech_test/lib/bank_account.rb": [
@@ -17,11 +24,11 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ]
     },
-    "timestamp": 1522060367
+    "timestamp": 1522060962
   }
 }

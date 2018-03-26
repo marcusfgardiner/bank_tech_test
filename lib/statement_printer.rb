@@ -6,6 +6,8 @@ class StatementPrinter
     end
   end
 
+  private
+
   def print_transaction(transaction)
     if transaction_type(transaction) == 'credit'
       puts transaction[1] + ' || ' + two_decimals(transaction[0])  + ' ||  || ' +  two_decimals(transaction[3])
@@ -13,8 +15,6 @@ class StatementPrinter
       puts transaction[1] + ' ||  || ' + two_decimals(transaction[0]) +  ' || ' + two_decimals(transaction[3])
     end
   end
-
-  private
 
   def transaction_type(transaction)
     transaction[2]

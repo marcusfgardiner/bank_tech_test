@@ -55,6 +55,10 @@ describe BankAccount do
     it 'raises an error if a negative amount is provided for a withdrawal' do
       expect { bank_deposit_50.withdraw(-10) }.to raise_error('Please provide a positive amount')
     end
+
+    it 'raises an error if amount is not an integer or float with 2 dp' do
+      expect { subject.deposit('hello') }.to raise_error('Please provide an integer or number to 2 decimal places')
+    end
   end
 
   describe '#transactions' do

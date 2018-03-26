@@ -60,7 +60,7 @@ I want an error to be raised if I try to deposit a negative amount
 So that I cannot withdraw a negative amount -
 I want an error to be raised if I try to withdraw a negative amount
 
-As a User -
+[R] As a User -
 So that I cannot go into my overdraft -
 I want an error to be raised if I try to go below a 0 balance
 

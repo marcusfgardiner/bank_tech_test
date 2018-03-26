@@ -36,11 +36,11 @@ II want the bank account to record the dates and amounts of credit transactions 
 So that I can see when I credited versus debited money to my bank account -
 I want the bank account to record the type of transactions to my bank account
 
-As a User -
+[G] As a User -
 So that I can see when I withdrew money into my bank account -
 If I don't provide a date, I want the default date for when I withdrew money to be today
 
-As a User -
+[G] As a User -
 So that I can see when I deposited money into my bank account -
 If I don't provide a date, I want the default date for when I deposit money to be today
 

@@ -11,7 +11,7 @@ class BankAccount
     add_transaction(amount, date, 'credit')
   end
 
-  def withdraw(amount, date)
+  def withdraw(amount, date = date_today)
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
   end

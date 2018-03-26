@@ -1,12 +1,17 @@
 class StatementPrinter
 
   def print_transactions(transactions)
+    print_header
     transactions.each do |transaction|
       print_transaction(transaction)
     end
   end
 
   private
+
+  def print_header
+    puts 'Date || Credit || Debit || Balance'
+  end
 
   def print_transaction(transaction)
     if transaction_type(transaction) == 'credit'

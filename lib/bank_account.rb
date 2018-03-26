@@ -48,11 +48,15 @@ class BankAccount
     end
     raise ERRORS[:positive_number] if amount < 0
     begin
-      date = Date.strptime(date, '%d/%m/%Y').to_s
-      Date.parse(date)
+      uk_date_format_check(date)
     rescue ArgumentError
       raise ERRORS[:date_format]
     end
+  end
+
+  def uk_date_format_check(date)
+    date = Date.strptime(date, '%d/%m/%Y').to_s
+    Date.parse(date)
   end
 
   def min_balance(amount)

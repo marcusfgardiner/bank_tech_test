@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T16:47:21+01:00">2018-03-26T16:47:21+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T16:51:32+01:00">2018-03-26T16:51:32+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.47
+         3.57
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>82</b> relevant lines. 
-    <span class="green"><b>82</b> lines covered</span> and
+    <b>84</b> relevant lines. 
+    <span class="green"><b>84</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#2201818f6eace066053203d0f9f93d9f28884204" class="src_link" title="lib/bank_account.rb">lib/bank_account.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>61</td>
-        <td>34</td>
-        <td>34</td>
+        <td>65</td>
+        <td>36</td>
+        <td>36</td>
         <td>0</td>
-        <td>6.1</td>
+        <td>6.2</td>
       </tr>
       
       <tr>
@@ -91,8 +91,8 @@
     <h3>lib/bank_account.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>36</b> relevant lines. 
+      <span class="green"><b>36</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -403,55 +403,55 @@
         <li class="covered" data-hits="15" data-linenumber="51">
           <span class="hits">15</span>
           
-          <code class="ruby">      date = Date.strptime(date, &#39;%d/%m/%Y&#39;).to_s</code>
+          <code class="ruby">      uk_date_format_check(date)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="52">
-          <span class="hits">13</span>
-          
-          <code class="ruby">      Date.parse(date)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="53">
+        <li class="covered" data-hits="2" data-linenumber="52">
           <span class="hits">2</span>
           
           <code class="ruby">    rescue ArgumentError</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="54">
+        <li class="covered" data-hits="2" data-linenumber="53">
           <span class="hits">2</span>
           
           <code class="ruby">      raise ERRORS[:date_format]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">  def min_balance(amount)</code>
+          <code class="ruby">  def uk_date_format_check(date)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="59">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="15" data-linenumber="58">
+          <span class="hits">15</span>
           
-          <code class="ruby">    raise ERRORS[:min_balance] if amount &gt; balance</code>
+          <code class="ruby">    date = Date.strptime(date, &#39;%d/%m/%Y&#39;).to_s</code>
+        </li>
+      
+        <li class="covered" data-hits="13" data-linenumber="59">
+          <span class="hits">13</span>
+          
+          <code class="ruby">    Date.parse(date)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -461,6 +461,30 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def min_balance(amount)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="63">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    raise ERRORS[:min_balance] if amount &gt; balance</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">end</code>

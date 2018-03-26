@@ -7,7 +7,8 @@ describe BankAccount do
   end
 
   let(:bank_deposit_50_withdraw_20) do
-    bank_deposit.withdraw(20, '15/03/2018')
+    bank_deposit_50.withdraw(20, '15/03/2018')
+    bank_deposit_50
   end
 
   describe '#balance' do
@@ -30,7 +31,7 @@ describe BankAccount do
 
   describe '#transactions' do
     it 'records a debit transaction including date and amount' do
-      expect(bank_deposit_50.transactions.last).to eq([20, '15/03/2018'])
+      expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018'])
     end
 
     it 'records a credit transaction including date and amount' do

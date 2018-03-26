@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T17:44:21+01:00">2018-03-26T17:44:21+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T17:48:21+01:00">2018-03-26T17:48:21+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.27
+         3.26
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>96</b> relevant lines. 
-    <span class="green"><b>96</b> lines covered</span> and
+    <b>98</b> relevant lines. 
+    <span class="green"><b>98</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -67,13 +67,13 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#a221f29fb9d868be4d1f6b6fd7436b5e71af7cb1" class="src_link" title="spec/bank_account_spec.rb">spec/bank_account_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>90</td>
+        <td>91</td>
         <td>48</td>
         <td>48</td>
         <td>0</td>
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#23bf52e0fdb6ffcf23a7578322097ba597e3560d" class="src_link" title="spec/statement_printer_spec.rb">spec/statement_printer_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>6</td>
-        <td>6</td>
+        <td>14</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.5</td>
       </tr>
       
     </tbody>
@@ -541,8 +541,8 @@
           <code class="ruby">  def print_transaction(transaction)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
           
           <code class="ruby">    print transaction[1] + &#39; || &#39; + two_decimals(transaction[0])</code>
         </li>
@@ -577,8 +577,8 @@
           <code class="ruby">  def two_decimals(number)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    (&quot;%0.02f&quot; % number.to_f.to_s)</code>
         </li>
@@ -929,19 +929,19 @@
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#validations&#39; do</code>
+          <code class="ruby">  describe &#39;#transactions&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error if a negative amount is provided for a deposit&#39; do</code>
+          <code class="ruby">    it &#39;records a debit transaction including date, amount, type and balance&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="54">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
           
-          <code class="ruby">      expect { subject.deposit(-10) }.to raise_error(errors[:positive_number])</code>
+          <code class="ruby">      expect(bank_deposit_50.transactions.last).to eq([50, &#39;12/03/2018&#39;, &#39;credit&#39;, 50])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
@@ -950,28 +950,28 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    it &#39;records a credit transaction including date, amount type and balance&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error if a negative amount is provided for a withdrawal&#39; do</code>
+          <code class="ruby">      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, &#39;15/03/2018&#39;, &#39;debit&#39;, 30])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="58">
           
-          <code class="ruby">      expect { bank_deposit_50.withdraw(-10) }.to raise_error(errors[:positive_number])</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -983,121 +983,121 @@
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error if amount is not an integer&#39; do</code>
+          <code class="ruby">  describe &#39;#validations&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="62">
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;raises an error if a negative amount is provided for a deposit&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="63">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.deposit(&#39;hello&#39;) }.to raise_error(errors[:number_format])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect { subject.deposit(-10) }.to raise_error(errors[:positive_number])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;not raise an error if amount is a float with 2 dp&#39; do</code>
+          <code class="ruby">    it &#39;raises an error if a negative amount is provided for a withdrawal&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="66">
+        <li class="covered" data-hits="2" data-linenumber="67">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.deposit(50.00) }.not_to raise_error</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="67">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect { bank_deposit_50.withdraw(-10) }.to raise_error(errors[:positive_number])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
+        <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error if date provided is not of correct format&#39; do</code>
+          <code class="ruby">    it &#39;raises an error if amount is not an integer&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="70">
+        <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.deposit(50, &#39;hello&#39;) }.to raise_error(errors[:date_format])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect { subject.deposit(&#39;hello&#39;) }.to raise_error(errors[:number_format])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error if date provided is not a valid UK date&#39; do</code>
+          <code class="ruby">    it &#39;not raise an error if amount is a float with 2 dp&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="74">
+        <li class="covered" data-hits="2" data-linenumber="75">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.deposit(50, &#39;5/25/2012&#39;) }.to raise_error(errors[:date_format])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="75">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect { subject.deposit(50.00) }.not_to raise_error</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="77">
+        <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;does not raise an error if date provided is a valid UK date&#39; do</code>
+          <code class="ruby">    it &#39;raises an error if date provided is not of correct format&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="78">
+        <li class="covered" data-hits="2" data-linenumber="79">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.deposit(50, &#39;25/05/2012&#39;) }.not_to raise_error</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect { subject.deposit(50, &#39;hello&#39;) }.to raise_error(errors[:date_format])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="80">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
@@ -1109,37 +1109,37 @@
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#transactions&#39; do</code>
+          <code class="ruby">    it &#39;raises an error if date provided is not a valid UK date&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="83">
+          <span class="hits">2</span>
           
-          <code class="ruby">    it &#39;records a debit transaction including date, amount and type&#39; do</code>
+          <code class="ruby">      expect { subject.deposit(50, &#39;5/25/2012&#39;) }.to raise_error(errors[:date_format])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(bank_deposit_50.transactions.last).to eq([50, &#39;12/03/2018&#39;, &#39;credit&#39;])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">    end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;records a credit transaction including date, amount and type&#39; do</code>
+          <code class="ruby">    it &#39;does not raise an error if date provided is a valid UK date&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="87">
+          <span class="hits">2</span>
           
-          <code class="ruby">      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, &#39;15/03/2018&#39;, &#39;debit&#39;])</code>
+          <code class="ruby">      expect { subject.deposit(50, &#39;25/05/2012&#39;) }.not_to raise_error</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
@@ -1157,6 +1157,12 @@
         <li class="never" data-hits="" data-linenumber="90">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -1170,8 +1176,8 @@
     <h3>spec/statement_printer_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1197,8 +1203,8 @@
           <code class="ruby">describe StatementPrinter do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">  let(:credit) { [50, &quot;26/03/2018&quot;, &quot;credit&quot;] }</code>
         </li>
@@ -1230,10 +1236,34 @@
         <li class="never" data-hits="" data-linenumber="9">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;prints out a credit transaction&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect { subject.print_transaction(credit) }.to output(&quot;26/03/2018 || 50.00&quot;).to_stdout</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>

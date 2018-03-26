@@ -49,6 +49,15 @@ describe BankAccount do
     end
   end
 
+  describe '#transactions' do
+    it 'records a debit transaction including date, amount, type and balance' do
+      expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018', 'credit', 50])
+    end
+    it 'records a credit transaction including date, amount type and balance' do
+      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, '15/03/2018', 'debit', 30])
+    end
+  end
+
   describe '#validations' do
     it 'raises an error if a negative amount is provided for a deposit' do
       expect { subject.deposit(-10) }.to raise_error(errors[:positive_number])
@@ -79,12 +88,4 @@ describe BankAccount do
     end
   end
 
-  describe '#transactions' do
-    it 'records a debit transaction including date, amount and type' do
-      expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018', 'credit'])
-    end
-    it 'records a credit transaction including date, amount and type' do
-      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, '15/03/2018', 'debit'])
-    end
-  end
 end

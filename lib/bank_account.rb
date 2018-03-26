@@ -14,6 +14,7 @@ class BankAccount
 
   def withdraw(amount, date = date_today)
     validations(amount)
+    raise 'Withdrawal denied, balance would go below 0!' if amount > balance
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
   end

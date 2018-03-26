@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T15:58:41+01:00">2018-03-26T15:58:41+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T16:14:59+01:00">2018-03-26T16:14:59+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.8
+         2.87
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>65</b> relevant lines. 
-    <span class="green"><b>65</b> lines covered</span> and
+    <b>68</b> relevant lines. 
+    <span class="green"><b>68</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,19 +53,19 @@
       <tr>
         <td class="strong"><a href="#2201818f6eace066053203d0f9f93d9f28884204" class="src_link" title="lib/bank_account.rb">lib/bank_account.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>44</td>
-        <td>26</td>
-        <td>26</td>
+        <td>46</td>
+        <td>27</td>
+        <td>27</td>
         <td>0</td>
-        <td>4.9</td>
+        <td>5.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#a221f29fb9d868be4d1f6b6fd7436b5e71af7cb1" class="src_link" title="spec/bank_account_spec.rb">spec/bank_account_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>72</td>
-        <td>39</td>
-        <td>39</td>
+        <td>76</td>
+        <td>41</td>
+        <td>41</td>
         <td>0</td>
         <td>1.4</td>
       </tr>
@@ -91,8 +91,8 @@
     <h3>lib/bank_account.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>26</b> lines covered</span> and
+      <b>27</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -124,14 +124,14 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="5">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="5">
+          <span class="hits">12</span>
           
           <code class="ruby">    @balance = 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="6">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="6">
+          <span class="hits">12</span>
           
           <code class="ruby">    @transactions = []</code>
         </li>
@@ -154,20 +154,20 @@
           <code class="ruby">  def deposit(amount, date = date_today)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="10">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="10">
+          <span class="hits">10</span>
           
           <code class="ruby">    validations(amount)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="11">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="11">
+          <span class="hits">8</span>
           
           <code class="ruby">    update_balance(amount)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="12">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">    add_transaction(amount, date, &#39;credit&#39;)</code>
         </li>
@@ -244,8 +244,8 @@
           <code class="ruby">  def update_balance(amount)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="25">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="25">
+          <span class="hits">11</span>
           
           <code class="ruby">    @balance += amount</code>
         </li>
@@ -268,8 +268,8 @@
           <code class="ruby">  def add_transaction(amount, date, type)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="29">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="29">
+          <span class="hits">11</span>
           
           <code class="ruby">    @transactions &lt;&lt; [amount, date, type]</code>
         </li>
@@ -292,8 +292,8 @@
           <code class="ruby">  def date_today</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="33">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="33">
+          <span class="hits">7</span>
           
           <code class="ruby">    Time.now.strftime(&#39;%d/%m/%Y&#39;)</code>
         </li>
@@ -316,49 +316,61 @@
           <code class="ruby">  def validations(amount)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="37">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="37">
+          <span class="hits">15</span>
           
-          <code class="ruby">    raise &#39;Please provide an integer or number to 2 decimal places&#39; if (amount.is_a? Integer) == false</code>
+          <code class="ruby">    unless (amount.is_a? Integer) || (amount.is_a? Float)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="38">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
           
-          <code class="ruby">    raise &#39;Please provide a positive amount&#39; if amount &lt; 0</code>
+          <code class="ruby">      raise &#39;Please provide an integer or number to 2 decimal places&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="40">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    raise &#39;Please provide a positive amount&#39; if amount &lt; 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">  def min_balance(amount)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="42">
+        <li class="covered" data-hits="4" data-linenumber="44">
           <span class="hits">4</span>
           
           <code class="ruby">    raise &#39;Withdrawal denied, balance would go below 0!&#39; if amount &gt; balance</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
@@ -374,8 +386,8 @@
     <h3>spec/bank_account_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>39</b> relevant lines. 
-      <span class="green"><b>39</b> lines covered</span> and
+      <b>41</b> relevant lines. 
+      <span class="green"><b>41</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -734,7 +746,7 @@
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error if amount is not an integer or float with 2 dp&#39; do</code>
+          <code class="ruby">    it &#39;raises an error if amount is not an integer&#39; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="60">
@@ -752,64 +764,88 @@
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#transactions&#39; do</code>
+          <code class="ruby">    it &#39;not raise an error if amount is a float with 2 dp&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="64">
+          <span class="hits">2</span>
           
-          <code class="ruby">    it &#39;records a debit transaction including date, amount and type&#39; do</code>
+          <code class="ruby">      expect { subject.deposit(50.00) }.not_to raise_error</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="65">
           
-          <code class="ruby">      expect(bank_deposit_50.transactions.last).to eq([50, &#39;12/03/2018&#39;, &#39;credit&#39;])</code>
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;records a credit transaction including date, amount and type&#39; do</code>
+          <code class="ruby">  describe &#39;#transactions&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, &#39;15/03/2018&#39;, &#39;debit&#39;])</code>
+          <code class="ruby">    it &#39;records a debit transaction including date, amount and type&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(bank_deposit_50.transactions.last).to eq([50, &#39;12/03/2018&#39;, &#39;credit&#39;])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;records a credit transaction including date, amount and type&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, &#39;15/03/2018&#39;, &#39;debit&#39;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby">end</code>

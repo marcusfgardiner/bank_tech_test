@@ -37,7 +37,7 @@ describe BankAccount do
     it 'record todays date if no date is provided for a debit transaction' do
       bank_deposit_50.withdraw(30)
       date_today = Time.now.strftime('%d/%m/%Y')
-      expect(bank_deposit_50_withdraw_20.transactions.last[1]).to eq(date_today)
+      expect(bank_deposit_50.transactions.last[1]).to eq(date_today)
     end
   end
 

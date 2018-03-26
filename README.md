@@ -32,7 +32,7 @@ I want the bank account to record the dates and amounts of debit transactions to
 So that I can see when I credited money to my bank account -
 II want the bank account to record the dates and amounts of credit transactions to my bank account
 
-As a User -
+[G] As a User -
 So that I can see when I credited versus debited money to my bank account -
 I want the bank account to record the type of transactions to my bank account
 

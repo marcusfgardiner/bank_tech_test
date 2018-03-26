@@ -27,17 +27,20 @@ describe BankAccount do
     it 'takes away 20 from the balance of the bank account' do
       expect(bank_deposit_50_withdraw_20.balance).to eq(30)
     end
+
+    it 'record todays date if no date is provided for a debit transaction' do
+      subject.deposit(50)
+      allow(Time).to receive(:now).and_return('12/12/2012')
+      expect(subject.transactions.last[1]).to eq('12/12/2012')
+    end
   end
 
   describe '#transactions' do
     it 'records a debit transaction including date, amount and type' do
       expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018', 'credit'])
     end
-
     it 'records a credit transaction including date, amount and type' do
       expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, '15/03/2018', 'debit'])
     end
-
   end
-
 end

@@ -34,6 +34,7 @@ class BankAccount
   end
 
   def validations(amount)
+    raise 'Please provide an integer or number to 2 decimal places' if (amount.is_a? Integer) == false
     raise 'Please provide a positive amount' if amount < 0
   end
 

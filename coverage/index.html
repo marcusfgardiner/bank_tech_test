@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T15:56:05+01:00">2018-03-26T15:56:05+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T15:58:41+01:00">2018-03-26T15:58:41+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.65
+         2.8
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>64</b> relevant lines. 
-    <span class="green"><b>64</b> lines covered</span> and
+    <b>65</b> relevant lines. 
+    <span class="green"><b>65</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#2201818f6eace066053203d0f9f93d9f28884204" class="src_link" title="lib/bank_account.rb">lib/bank_account.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>43</td>
-        <td>25</td>
-        <td>25</td>
+        <td>44</td>
+        <td>26</td>
+        <td>26</td>
         <td>0</td>
-        <td>4.6</td>
+        <td>4.9</td>
       </tr>
       
       <tr>
@@ -91,8 +91,8 @@
     <h3>lib/bank_account.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>26</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -319,40 +319,46 @@
         <li class="covered" data-hits="14" data-linenumber="37">
           <span class="hits">14</span>
           
-          <code class="ruby">    raise &#39;Please provide a positive amount&#39; if amount &lt; 0</code>
+          <code class="ruby">    raise &#39;Please provide an integer or number to 2 decimal places&#39; if (amount.is_a? Integer) == false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="covered" data-hits="13" data-linenumber="38">
+          <span class="hits">13</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    raise &#39;Please provide a positive amount&#39; if amount &lt; 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">  def min_balance(amount)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="41">
+        <li class="covered" data-hits="4" data-linenumber="42">
           <span class="hits">4</span>
           
           <code class="ruby">    raise &#39;Withdrawal denied, balance would go below 0!&#39; if amount &gt; balance</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">end</code>

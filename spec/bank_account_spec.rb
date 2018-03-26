@@ -63,6 +63,10 @@ describe BankAccount do
     it 'not raise an error if amount is a float with 2 dp' do
       expect { subject.deposit(50.00) }.not_to raise_error
     end
+
+    it 'raises an error if date provided is not of correct format' do
+      expect { subject.deposit(50,'hello') }.to raise_error("Not a correct date. Please provide date in format 'dd/mm/yy'")
+    end
   end
 
   describe '#transactions' do

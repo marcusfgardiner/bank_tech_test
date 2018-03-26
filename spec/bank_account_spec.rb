@@ -9,7 +9,7 @@ describe BankAccount do
 
   describe '#deposit(amount, date)' do
     it 'adds 20 to the balance of the bank account' do
-      subject.deposit(20)
+      subject.deposit(20, '12/03/2018')
       expect(subject.balance).to eq(20)
     end
   end
@@ -27,10 +27,10 @@ describe BankAccount do
     end
   end
 
-  describe '#withdraw(amount)' do
+  describe '#withdraw(amount, date)' do
     it 'takes away 20 from the balance of the bank account' do
-      subject.deposit(50)
-      subject.withdraw(20)
+      subject.deposit(50, '12/02/2017')
+      subject.withdraw(20, '12/02/2017')
       expect(subject.balance).to eq(30)
     end
   end

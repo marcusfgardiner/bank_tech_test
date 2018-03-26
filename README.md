@@ -1,5 +1,11 @@
 # bank_tech_test
 
+## How to use:
+
+* git clone repository
+* 'bundle install' dependencies in the terminal
+* to run tests: 'rspec' in the terminal
+
 ## User stories:
 
 [G] As a User -

@@ -47,6 +47,10 @@ describe BankAccount do
     it 'raises an error if a negative amount is provided for a deposit' do
       expect { subject.deposit(-10) }.to raise_error('Please provide a positive amount')
     end
+
+    it 'raises an error if a negative amount is provided for a withdrawal' do
+      expect { bank_deposit_50.withdraw(-10) }.to raise_error('Please provide a positive amount')
+    end
   end
 
   describe '#transactions' do

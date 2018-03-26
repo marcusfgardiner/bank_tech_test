@@ -1,7 +1,6 @@
 require 'bank_account'
 
 describe BankAccount do
-
   let(:errors) { described_class::ERRORS }
   let(:bank_deposit_50) do
     subject.deposit(50, '12/03/2018')
@@ -87,5 +86,4 @@ describe BankAccount do
       expect { subject.deposit(50, '25/05/2012') }.not_to raise_error
     end
   end
-
 end

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T18:21:47+01:00">2018-03-26T18:21:47+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-26T18:25:04+01:00">2018-03-26T18:25:04+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.2
+         3.21
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>112</b> relevant lines. 
-    <span class="green"><b>112</b> lines covered</span> and
+    <b>111</b> relevant lines. 
+    <span class="green"><b>111</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#23bf52e0fdb6ffcf23a7578322097ba597e3560d" class="src_link" title="spec/statement_printer_spec.rb">spec/statement_printer_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>15</td>
-        <td>15</td>
+        <td>24</td>
+        <td>14</td>
+        <td>14</td>
         <td>0</td>
         <td>1.7</td>
       </tr>
@@ -1266,8 +1266,8 @@
     <h3>spec/statement_printer_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1338,7 +1338,7 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#print_transaction&#39; do</code>
+          <code class="ruby">  describe &#39;#print_transactions&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
@@ -1350,7 +1350,7 @@
         <li class="covered" data-hits="2" data-linenumber="13">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.print_transactions(credit_transaction) }.to output(&quot;26/03/2018 || 50.00 ||  || 50.00\n&quot;).to_stdout</code>
+          <code class="ruby">      expect { subject.print_transactions(credit_transaction) }.to output(&quot;Date || Credit || Debit || Balance\n26/03/2018 || 50.00 ||  || 50.00\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -1374,7 +1374,7 @@
         <li class="covered" data-hits="2" data-linenumber="17">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.print_transactions(debit_transaction) }.to output(&quot;26/03/2018 ||  || 20.00 || 30.00\n&quot;).to_stdout</code>
+          <code class="ruby">      expect { subject.print_transactions(debit_transaction) }.to output(&quot;Date || Credit || Debit || Balance\n26/03/2018 ||  || 20.00 || 30.00\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -1398,34 +1398,22 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#print_transactions&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
           <code class="ruby">    it &#39;prints out a debit AND credit transaction&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
+        <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect { subject.print_transactions(transactions) }.to output(&quot;26/03/2018 || 50.00 ||  || 50.00\n26/03/2018 ||  || 20.00 || 30.00\n&quot;).to_stdout</code>
+          <code class="ruby">      expect { subject.print_transactions(transactions) }.to output(&quot;Date || Credit || Debit || Balance\n26/03/2018 || 50.00 ||  || 50.00\n26/03/2018 ||  || 20.00 || 30.00\n&quot;).to_stdout</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>

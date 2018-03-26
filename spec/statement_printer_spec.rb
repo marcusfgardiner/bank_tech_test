@@ -8,19 +8,17 @@ describe StatementPrinter do
   let(:debit_transaction) { [debit]}
 
 
-  describe '#print_transaction' do
+  describe '#print_transactions' do
     it 'prints out a credit transaction' do
-      expect { subject.print_transactions(credit_transaction) }.to output("26/03/2018 || 50.00 ||  || 50.00\n").to_stdout
+      expect { subject.print_transactions(credit_transaction) }.to output("Date || Credit || Debit || Balance\n26/03/2018 || 50.00 ||  || 50.00\n").to_stdout
     end
 
     it 'prints out a debit transaction' do
-      expect { subject.print_transactions(debit_transaction) }.to output("26/03/2018 ||  || 20.00 || 30.00\n").to_stdout
+      expect { subject.print_transactions(debit_transaction) }.to output("Date || Credit || Debit || Balance\n26/03/2018 ||  || 20.00 || 30.00\n").to_stdout
     end
   end
 
-  describe '#print_transactions' do
     it 'prints out a debit AND credit transaction' do
-      expect { subject.print_transactions(transactions) }.to output("26/03/2018 || 50.00 ||  || 50.00\n26/03/2018 ||  || 20.00 || 30.00\n").to_stdout
-    end
+      expect { subject.print_transactions(transactions) }.to output("Date || Credit || Debit || Balance\n26/03/2018 || 50.00 ||  || 50.00\n26/03/2018 ||  || 20.00 || 30.00\n").to_stdout
   end
 end

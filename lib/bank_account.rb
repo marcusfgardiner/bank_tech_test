@@ -11,7 +11,8 @@ class BankAccount
     @transactions << [amount, date]
   end
 
-  def withdraw(amount)
+  def withdraw(amount, date)
     @balance -= amount
+    @transactions << [amount, date]
   end
 end

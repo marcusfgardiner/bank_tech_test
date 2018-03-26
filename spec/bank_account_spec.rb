@@ -43,6 +43,12 @@ describe BankAccount do
     end
   end
 
+  describe '#validations' do
+    it 'raises an error if a negative amount is provided for a deposit' do
+      expect { subject.deposit(-10) }.to raise_error('Please provide a positive amount')
+    end
+  end
+
   describe '#transactions' do
     it 'records a debit transaction including date, amount and type' do
       expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018', 'credit'])

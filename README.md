@@ -8,39 +8,39 @@
 
 ## User stories:
 
-[G] As a User -
+[R] As a User -
 So that I can see the balance of my bank account -
 I want to be able to check the balance of my bank account
 
-[G] As a User -
+[R] As a User -
 So that I can have a bank account -
 I want to be able to create a bank account with a default balance of 0
 
-[G] As a User -
+[R] As a User -
 So that I can increase the balance of my bank account -
 I want to be able to deposit money into my bank account
 
-[G] As a User -
+[R] As a User -
 So that I can decrease the balance of my bank account -
 I want to be able to withdraw money from my bank account
 
-[G] As a User -
+[R] As a User -
 So that I can see when I debited money from my bank account -
 I want the bank account to record the dates and amounts of debit transactions to my bank account
 
-[G] As a User -
+[R] As a User -
 So that I can see when I credited money to my bank account -
 II want the bank account to record the dates and amounts of credit transactions to my bank account
 
-[G] As a User -
+[R] As a User -
 So that I can see when I credited versus debited money to my bank account -
 I want the bank account to record the type of transactions to my bank account
 
-[G] As a User -
+[R] As a User -
 So that I can see when I withdrew money into my bank account -
 If I don't provide a date, I want the default date for when I withdrew money to be today
 
-[G] As a User -
+[R] As a User -
 So that I can see when I deposited money into my bank account -
 If I don't provide a date, I want the default date for when I deposit money to be today
 

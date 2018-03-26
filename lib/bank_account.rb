@@ -35,7 +35,7 @@ class BankAccount
   end
 
   def add_transaction(amount, date, type)
-    @transactions << [amount, date, type]
+    @transactions << [amount, date, type, balance]
   end
 
   def date_today

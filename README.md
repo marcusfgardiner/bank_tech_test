@@ -10,7 +10,7 @@ I want to be able to check the balance of my bank account
 So that I can have a bank account -
 I want to be able to create a bank account with a default balance of 0
 
-As a User -
+[G] As a User -
 So that I can increase the balance of my bank account -
 I want to be able to deposit money into my bank account
 

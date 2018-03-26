@@ -15,10 +15,6 @@ So that I can increase the balance of my bank account -
 I want to be able to deposit money into my bank account
 
 As a User -
-So that I cannot go into my overdraft -
-I want an error to be raised if I try to go below a 0 balance
-
-As a User -
 So that I can see when I deposited money into my bank account -
 I want to be able to provide a date that I deposited money
 
@@ -30,9 +26,25 @@ As a User -
 So that I can see when I withdrew money into my bank account -
 I want to be able to provide a date that I withdrew money
 
+# PRINTING
+
 As a User -
 So that I can see the transaction history of my bank account -
 I want to be able to view a printed history of the use of my bank account
+
+# VALIDATIONS
+
+As a User -
+So that I cannot deposit a negative amount -
+I want an error to be raised if I try to deposit a negative amount
+
+As a User -
+So that I cannot withdraw a negative amount -
+I want an error to be raised if I try to withdraw a negative amount
+
+As a User -
+So that I cannot go into my overdraft -
+I want an error to be raised if I try to go below a 0 balance
 
 As a User -
 So that I cannot break my bank account -

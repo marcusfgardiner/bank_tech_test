@@ -68,10 +68,6 @@ I want an error to be raised if I try to go below a 0 balance
 So that I cannot break my bank account -
 I want an error to be raised if I try to enter something that is not a number (format either 500 or 500.00)
 
-As a User -
+[G] As a User -
 So that I cannot break my bank account -
 I want an error to be raised if I try to enter an incorrect date of transaction
-
-As a User -
-So that I cannot break my bank account -
-I want an error to be raised if I try to enter a date of transaction in the future

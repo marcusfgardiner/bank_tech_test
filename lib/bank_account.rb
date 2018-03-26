@@ -3,6 +3,13 @@ require 'date'
 class BankAccount
   attr_reader :balance, :transactions
 
+  ERRORS = {
+    number_format: 'Please provide an integer or number to 2 decimal places',
+    positive_number: 'Please provide a positive amount',
+    date_format: "Not a correct date. Please provide date in format 'dd/mm/yy'",
+    min_balance: 'Withdrawal denied, balance would go below 0!'
+  }.freeze
+
   def initialize
     @balance = 0
     @transactions = []
@@ -37,18 +44,18 @@ class BankAccount
 
   def validations(amount, date)
     unless (amount.is_a? Integer) || (amount.is_a? Float)
-      raise 'Please provide an integer or number to 2 decimal places'
+      raise ERRORS[:number_format]
     end
-    raise 'Please provide a positive amount' if amount < 0
+    raise ERRORS[:positive_number] if amount < 0
     begin
       date = Date.strptime(date, '%d/%m/%Y').to_s
       Date.parse(date)
     rescue ArgumentError
-      raise "Not a correct date. Please provide date in format 'dd/mm/yy'"
+      raise ERRORS[:date_format]
     end
   end
 
   def min_balance(amount)
-    raise 'Withdrawal denied, balance would go below 0!' if amount > balance
+    raise ERRORS[:min_balance] if amount > balance
   end
 end

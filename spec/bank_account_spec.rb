@@ -1,6 +1,8 @@
 require 'bank_account'
 
 describe BankAccount do
+
+  let(:errors) { described_class::ERRORS }
   let(:bank_deposit_50) do
     subject.deposit(50, '12/03/2018')
     subject
@@ -43,21 +45,21 @@ describe BankAccount do
     end
 
     it 'raises an error if balance would go below 0 from withdrawal' do
-      expect { subject.withdraw(20) }.to raise_error('Withdrawal denied, balance would go below 0!')
+      expect { subject.withdraw(20) }.to raise_error(errors[:min_balance])
     end
   end
 
   describe '#validations' do
     it 'raises an error if a negative amount is provided for a deposit' do
-      expect { subject.deposit(-10) }.to raise_error('Please provide a positive amount')
+      expect { subject.deposit(-10) }.to raise_error(errors[:positive_number])
     end
 
     it 'raises an error if a negative amount is provided for a withdrawal' do
-      expect { bank_deposit_50.withdraw(-10) }.to raise_error('Please provide a positive amount')
+      expect { bank_deposit_50.withdraw(-10) }.to raise_error(errors[:positive_number])
     end
 
     it 'raises an error if amount is not an integer' do
-      expect { subject.deposit('hello') }.to raise_error('Please provide an integer or number to 2 decimal places')
+      expect { subject.deposit('hello') }.to raise_error(errors[:number_format])
     end
 
     it 'not raise an error if amount is a float with 2 dp' do
@@ -65,11 +67,11 @@ describe BankAccount do
     end
 
     it 'raises an error if date provided is not of correct format' do
-      expect { subject.deposit(50, 'hello') }.to raise_error("Not a correct date. Please provide date in format 'dd/mm/yy'")
+      expect { subject.deposit(50, 'hello') }.to raise_error(errors[:date_format])
     end
 
     it 'raises an error if date provided is not a valid UK date' do
-      expect { subject.deposit(50, '5/25/2012') }.to raise_error("Not a correct date. Please provide date in format 'dd/mm/yy'")
+      expect { subject.deposit(50, '5/25/2012') }.to raise_error(errors[:date_format])
     end
 
     it 'does not raise an error if date provided is a valid UK date' do

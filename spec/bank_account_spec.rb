@@ -30,13 +30,14 @@ describe BankAccount do
   end
 
   describe '#transactions' do
-    it 'records a debit transaction including date and amount' do
-      expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018'])
+    it 'records a debit transaction including date, amount and type' do
+      expect(bank_deposit_50.transactions.last).to eq([50, '12/03/2018', 'credit'])
     end
 
-    it 'records a credit transaction including date and amount' do
-      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, '15/03/2018'])
+    it 'records a credit transaction including date, amount and type' do
+      expect(bank_deposit_50_withdraw_20.transactions.last).to eq([20, '15/03/2018', 'debit'])
     end
+
   end
 
 end

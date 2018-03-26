@@ -8,7 +8,7 @@ class BankAccount
 
   def deposit(amount, date)
     update_balance(amount)
-    add_transaction(amount, date)
+    add_transaction(amount, date, 'credit')
   end
 
   def withdraw(amount, date)
@@ -22,7 +22,7 @@ class BankAccount
     @balance += amount
   end
 
-  def add_transaction(amount, date)
-    @transactions << [amount, date]
+  def add_transaction(amount, date, type)
+    @transactions << [amount, date, type]
   end
 end

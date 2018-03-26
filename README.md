@@ -24,13 +24,17 @@ I want to be able to deposit money into my bank account
 So that I can decrease the balance of my bank account -
 I want to be able to withdraw money from my bank account
 
-As a User -
+[G] As a User -
 So that I can see when I debited money from my bank account -
 I want the bank account to record the dates and amounts of debit transactions to my bank account
 
-As a User -
+[G] As a User -
 So that I can see when I credited money to my bank account -
 II want the bank account to record the dates and amounts of credit transactions to my bank account
+
+As a User -
+So that I can see when I credited versus debited money to my bank account -
+I want the bank account to record the type of transactions to my bank account
 
 As a User -
 So that I can see when I withdrew money into my bank account -

@@ -12,8 +12,17 @@ describe BankAccount do
       subject.deposit(20)
       expect(subject.balance).to eq(20)
     end
-    it 'records debit transactions including date and amount' do
+  end
+
+  describe '#transactions' do
+    it 'records a debit transaction including date and amount' do
       subject.deposit(20, '15/03/2018')
+      expect(subject.transactions.last).to eq([20, '15/03/2018'])
+    end
+
+    it 'records a credit transaction including date and amount' do
+      subject.deposit(50)
+      subject.withdraw(20, '15/03/2018')
       expect(subject.transactions.last).to eq([20, '15/03/2018'])
     end
   end

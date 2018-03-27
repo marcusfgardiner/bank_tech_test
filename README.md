@@ -28,7 +28,7 @@ My approach
 * Based on what I discovered as I went, I added new user features to the README to incorporate
 * I also aimed to cover what I saw as a sensible amount of validations, where people might write typos or for example use US rather than UK date format
 * I used simplecov to ensure I had full test coverage throughout the development process
-* I then did a wider refactor of the code base, and tied together the classes in a separate and clear user interface, with a set of public methods for the user to use
+* I then did a wider refactor of the code base, and tied together the classes and user input by extracting public methods into a separate and clear user interface class called 'BankAccount', with a set of public methods for the user to use
 * I then also reviewed the code to ensure I had applied SOLID principles throughout the code base
 
 Personal code review
@@ -36,7 +36,7 @@ Personal code review
 * I think my algorithmic and TDD led approach enabled me to take each step clearly, quickly and accurately
 * I was pleased with my application of OOP and SOLID principles on the whole, particularly single responsibility for methods.
 * Being not used to creating applications designed to work with irb, there was some difficulty in getting things to cleanly print to the terminal, and testing this without long text strings
-* I was pleased with the structure of my code. Potentially I could have further extracted coding logic into additional classes such as a calculator class for numbers, and/or a validation class for validations of numbers and dates
+* I was pleased with the structure of my code. I could have further extracted coding logic into additional classes such as a calculator class for numbers, and/or a validation class for validations of numbers, and a time class for dealing with dates and times. I felt that for the scale and future of this application, further extraction at this point did not make sense until I had further information
 
 Next steps I would take with more time
 ---------

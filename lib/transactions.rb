@@ -2,7 +2,7 @@ require 'date'
 require_relative 'statement_printer'
 
 class Transactions
-  attr_reader :balance, :transactions
+  attr_reader :balance, :transactions, :statement_printer
 
   ERRORS = {
     number_format: 'Please provide an integer or number to 2 decimal places',
@@ -14,6 +14,7 @@ class Transactions
   def initialize
     @balance = 0
     @transactions = []
+    @statement_printer = StatementPrinter.new
   end
 
   def deposit(amount, date = date_today)
@@ -27,6 +28,10 @@ class Transactions
     min_balance_check(amount)
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
+  end
+
+  def print_statement
+    statement_printer.print_transactions(transactions)
   end
 
   private

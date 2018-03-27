@@ -1,7 +1,6 @@
 require_relative 'transactions'
 
 class BankAccount
-
   attr_reader :transactions
 
   def initialize
@@ -27,5 +26,4 @@ class BankAccount
   def date_today
     Time.now.strftime('%d/%m/%Y')
   end
-
 end

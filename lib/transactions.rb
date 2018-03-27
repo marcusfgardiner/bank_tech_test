@@ -23,7 +23,7 @@ class Transactions
 
   def withdraw(amount, date = date_today)
     validations(amount, date)
-    min_balance(amount)
+    min_balance_check(amount)
     update_balance(-amount)
     add_transaction(amount, date, 'debit')
   end
@@ -59,7 +59,7 @@ class Transactions
     Date.parse(date)
   end
 
-  def min_balance(amount)
+  def min_balance_check(amount)
     raise ERRORS[:min_balance] if amount > balance
   end
 end

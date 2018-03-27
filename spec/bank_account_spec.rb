@@ -44,4 +44,14 @@ describe BankAccount do
 
   end
 
+  describe '#print_statement' do
+
+    it 'calls print statement in the transactions class' do
+      allow(subject.transactions).to receive(:print_statement)
+      expect(subject.transactions).to receive(:print_statement)
+      subject.print_statement(50, '12/12/2012')
+    end
+
+  end
+
 end

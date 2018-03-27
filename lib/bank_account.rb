@@ -10,6 +10,7 @@ class BankAccount
 
   def deposit(amount, date = date_today)
     transactions.deposit(amount, date)
+    puts "Deposit of #{amount} accepted"
   end
 
 end

@@ -17,7 +17,7 @@
   * print your statement with 'print_statement'
 
 
-### Example:
+### Example and screenshot:
 * irb
 * cd to bank_tech_test directory
 * require 'lib/bank_account.rb'
@@ -27,6 +27,8 @@
 * acc.deposit(50.00, '12/02/2012')
 * acc.withdraw(45.50, '12/02/2012')
 * acc.print_statement
+
+![alt text](irb_Screenshot.png "App irb screenshot")
 
 ### Notes:
  * Please provide date in 'dd/mm/yyyy' format

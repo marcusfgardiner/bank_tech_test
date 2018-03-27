@@ -18,4 +18,8 @@ class BankAccount
     puts "Withdrawal of #{amount} accepted"
   end
 
+  def date_today
+    Time.now.strftime('%d/%m/%Y')
+  end
+
 end

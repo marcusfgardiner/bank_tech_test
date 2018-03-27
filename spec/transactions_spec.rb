@@ -12,10 +12,6 @@ describe Transactions do
     bank_deposit_50
   end
 
-  let(:date_today) do
-    Time.now.strftime('%d/%m/%Y')
-  end
-
   describe '#balance' do
     it 'returns a 0 balance for a new bank account' do
       expect(subject.balance).to eq(0)
@@ -27,10 +23,6 @@ describe Transactions do
       expect(bank_deposit_50.balance).to eq(50)
     end
 
-    it 'record todays date if no date is provided for a debit transaction' do
-      subject.deposit(50)
-      expect(subject.transactions.last[1]).to eq(date_today)
-    end
   end
 
   describe '#withdraw(amount, date)' do
@@ -38,13 +30,8 @@ describe Transactions do
       expect(bank_deposit_50_withdraw_20.balance).to eq(30)
     end
 
-    it 'record todays date if no date is provided for a debit transaction' do
-      bank_deposit_50.withdraw(30)
-      expect(bank_deposit_50.transactions.last[1]).to eq(date_today)
-    end
-
     it 'raises an error if balance would go below 0 from withdrawal' do
-      expect { subject.withdraw(20) }.to raise_error(errors[:min_balance])
+      expect { subject.withdraw(20, '12/12/2012') }.to raise_error(errors[:min_balance])
     end
   end
 
@@ -59,19 +46,19 @@ describe Transactions do
 
   describe '#validations' do
     it 'raises an error if a negative amount is provided for a deposit' do
-      expect { subject.deposit(-10) }.to raise_error(errors[:positive_number])
+      expect { subject.deposit(-10, '12/12/2012') }.to raise_error(errors[:positive_number])
     end
 
     it 'raises an error if a negative amount is provided for a withdrawal' do
-      expect { bank_deposit_50.withdraw(-10) }.to raise_error(errors[:positive_number])
+      expect { bank_deposit_50.withdraw(-10, '12/12/2012') }.to raise_error(errors[:positive_number])
     end
 
     it 'raises an error if amount is not an integer' do
-      expect { subject.deposit('hello') }.to raise_error(errors[:number_format])
+      expect { subject.deposit('hello', '12/12/2012') }.to raise_error(errors[:number_format])
     end
 
     it 'not raise an error if amount is a float with 2 dp' do
-      expect { subject.deposit(50.00) }.not_to raise_error
+      expect { subject.deposit(50.00, '12/12/2012') }.not_to raise_error
     end
 
     it 'raises an error if date provided is not of correct format' do

@@ -38,10 +38,6 @@ class Transactions
     @transactions << [amount, date, type, balance]
   end
 
-  def date_today
-    Time.now.strftime('%d/%m/%Y')
-  end
-
   def validations(amount, date)
     unless (amount.is_a? Integer) || (amount.is_a? Float)
       raise ERRORS[:number_format]

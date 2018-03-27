@@ -4,17 +4,29 @@
 
 * requires ruby installation (v2.5.0)
 * git clone repository
-* 'bundle install' dependencies in the terminal
+* 'bundle install' in the terminal to install all dependencies
 
 ## How to run tests:
 * to run tests: 'rspec' in the terminal
 
 ## How to use file:
-* open irb by running 'irb' in terminal
-* create a new bank account with Transactions.new. You can then:
- * deposit money with 'deposit(amount,date)'
- * withdraw money with 'withdraw(amount,date)'
-* to read your statement, use account_name.statement_printer
+* open irb by running 'irb' in terminal and require the file 'lib/bank_account.rb'
+* create a new bank account with BankAccount.new. You can then:
+ * deposit money with 'deposit(amount, date)'
+ * withdraw money with 'withdraw(amount, date)'
+ * print your statement with 'print_statement'
+
+
+* Example:
+ * irb
+ * cd to bank_tech_test directory
+ * require 'lib/bank_account.rb'
+ * acc = BankAccount.new
+ * acc.deposit(30, '11/02/2012')
+ * acc.withdraw(10, '11/02/2012')
+ * acc.deposit(50.00, '12/02/2012')
+ * acc.withdraw(45.50, '12/02/2012')
+ * acc.print_statement
 
 * Notes:
  * Please provide date in 'dd/mm/yyyy' format

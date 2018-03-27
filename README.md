@@ -18,15 +18,15 @@
 
 
 ### Example:
- * irb
- * cd to bank_tech_test directory
- * require 'lib/bank_account.rb'
- * acc = BankAccount.new
- * acc.deposit(30, '11/02/2012')
- * acc.withdraw(10, '11/02/2012')
- * acc.deposit(50.00, '12/02/2012')
- * acc.withdraw(45.50, '12/02/2012')
- * acc.print_statement
+  * irb
+  * cd to bank_tech_test directory
+  * require 'lib/bank_account.rb'
+  * acc = BankAccount.new
+  * acc.deposit(30, '11/02/2012')
+  * acc.withdraw(10, '11/02/2012')
+  * acc.deposit(50.00, '12/02/2012')
+  * acc.withdraw(45.50, '12/02/2012')
+  * acc.print_statement
 
 * Notes:
  * Please provide date in 'dd/mm/yyyy' format

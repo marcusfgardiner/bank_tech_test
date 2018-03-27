@@ -12,12 +12,12 @@
 ## How to use file:
 * open irb by running 'irb' in terminal and require the file 'lib/bank_account.rb'
 * create a new bank account with BankAccount.new. You can then:
- * deposit money with 'deposit(amount, date)'
- * withdraw money with 'withdraw(amount, date)'
- * print your statement with 'print_statement'
+  * deposit money with 'deposit(amount, date)'
+  * withdraw money with 'withdraw(amount, date)'
+  * print your statement with 'print_statement'
 
 
-* Example:
+### Example:
  * irb
  * cd to bank_tech_test directory
  * require 'lib/bank_account.rb'

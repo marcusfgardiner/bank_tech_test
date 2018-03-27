@@ -35,6 +35,13 @@
 
 My approach
 ---------
+* Code structure and 3 classes:
+  * BankAccount is the user interface for the user to interact with their account
+  * Transactions manages all transaction mutations
+  * StatementPrinter formats and prints the transactions to the screen
+
+My approach
+---------
 * I started by breaking down the user specification into user stories (See below)
 * I then used TDD to work feature by feature. I aimed to get the test to pass first, then refactored the code
 * Based on what I discovered as I went, I added new user features to the README to incorporate

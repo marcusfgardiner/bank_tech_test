@@ -12,11 +12,13 @@ describe BankAccount do
   end
 
   it 'withdraws money using the transaction class' do
-    expect(subject.transactions).to receive(:deposit).with(50, '12/12/2012')
+    allow(subject.transactions).to receive(:withdraw)
+    expect(subject.transactions).to receive(:withdraw).with(50, '12/12/2012')
     subject.withdraw(50, '12/12/2012')
   end
 
   it 'puts to the screen that withdrawal was succesful' do
+    allow(subject.transactions).to receive(:withdraw)
     expect { subject.withdraw(50,'12/12/2012') }.to output("Withdrawal of 50 accepted\n").to_stdout
   end
 

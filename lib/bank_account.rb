@@ -13,4 +13,9 @@ class BankAccount
     puts "Deposit of #{amount} accepted"
   end
 
+  def withdraw(amount, date = date_today)
+    transactions.withdraw(amount, date)
+    puts "Withdrawal of #{amount} accepted"
+  end
+
 end

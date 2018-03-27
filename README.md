@@ -11,7 +11,7 @@
 
 ## How to use file:
 * open irb by running 'irb' in terminal
-* create a new bank account with BankAccount.new. You can then:
+* create a new bank account with Transactions.new. You can then:
  * deposit money with 'deposit(amount,date)'
  * withdraw money with 'withdraw(amount,date)'
 * to read your statement, use account_name.statement_printer

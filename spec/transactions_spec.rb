@@ -1,6 +1,6 @@
-require 'bank_account'
+require 'transactions'
 
-describe BankAccount do
+describe Transactions do
   let(:errors) { described_class::ERRORS }
   let(:bank_deposit_50) do
     subject.deposit(50, '12/03/2018')

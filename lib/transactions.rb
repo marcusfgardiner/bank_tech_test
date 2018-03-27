@@ -1,6 +1,6 @@
 require 'date'
 
-class BankAccount
+class Transactions
   attr_reader :balance, :transactions
 
   ERRORS = {
